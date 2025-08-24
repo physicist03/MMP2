@@ -4413,6 +4413,36 @@ and finally:
 \begin{equation}
 	-\frac{1}{2} \nabla^2 \psi(x, y, z) = E \psi(x, y,z) \quad (\hbar = M (\text{mass})  = 1)
 \end{equation}
+Dirichlet conditions: $\psi = 0$ on the walls of the box. \textcolor{red}{we do not know $E$!} separation of variables:
+\begin{equation}
+    \frac{X''}{X} + \frac{Y''}{Y} + \frac{Z''}{Z} = -2E = -k^2 \quad (\psi = XYZ)
+\end{equation}
+\begin{equation}
+    X'' + l^2 X = 0, \quad Y'' + m^2 Y = 0, \quad Z'' + n^2 Z = 0, \quad l^2 + m^2 + n^2 = 2E
+\end{equation}
+\begin{equation}
+    X = A\sin lx + B \cos lx, \quad X(0) = B = 0, \quad X(a) = A \sin l a = 0, \quad l = \frac{\lambda \pi}{a}
+\end{equation}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.25\linewidth]{fig62.png}
+\end{figure}
+
+So,
+\begin{align}
+    X(x) = X_\lambda (x) &= \sin \frac{\lambda \pi x}{a} \quad (\lambda = 1, 2, 3) \ \ \left( l = \frac{\lambda \pi}{a} \right)\\
+    Y(y) = Y_\mu (y) &= \sin \frac{\mu \pi y}{b} \quad (\mu = 1, 2, 3) \ \ \left( m = \frac{\mu \pi}{b} \right)\\
+    Z(z) = Z_\nu (z) &= \sin \frac{\nu \pi z}{c} \quad (\nu = 1, 2, 3) \ \ \left( n = \frac{\nu \pi}{c} \right)
+\end{align}
+moreover:
+\begin{equation}
+    l^2 + m^2 + n^2 = 2E = \pi^2 \left( \frac{\lambda^2}{a^2} + \frac{\mu^2}{b^2} + \frac{\nu^2}{c^2} \right) \quad \Rightarrow \quad E = \frac{\pi^2}{2} \left( \frac{\lambda^2}{a^2} + \frac{\mu^2}{b^2} + \frac{\nu^2}{c^2} \right)
+\end{equation}
+We found an infinite set of solutions. They are orthogonal because they are the eigenfunctions of a Hermitian operator and can be normalized.
+\begin{equation}
+    \psi_{\lambda \mu \nu} (x,y,z) = a_{\lambda \mu \nu} \sin \frac{\lambda \pi x}{a} \sin \frac{\mu \pi y}{b} \sin \frac{\nu \pi z}{c} \quad \Rightarrow \quad E_{\lambda \mu \nu} = \frac{\pi^2}{2} \left( \frac{\lambda^2}{a^2} + \frac{\mu^2}{b^2} + \frac{\nu^2}{c^2} \right)
+\end{equation}
+discrete spectrum, the energy is quantized.
 
 \end{document}
